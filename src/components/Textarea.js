@@ -4,8 +4,7 @@ import DarkModeToggle from "./DarkModeToggle";
 export default function Textarea() {
   const [text, setText] = useState("");
   const [output, setOutput] = useState("");
-  const [darkMode, setDarkMode] = useState(false); // No localStorage
-
+  const [darkMode, setDarkMode] = useState(false); 
   const upperCase = () => setOutput(text.toUpperCase());
   const lowerCase = () => setOutput(text.toLowerCase());
   const reverseText = () => setOutput(text.split("").reverse().join(""));
@@ -42,7 +41,7 @@ export default function Textarea() {
 
   return (
     <div style={containerStyle}>
-      {/* Move Dark Mode Button to Right */}
+      
       <div className="d-flex justify-content-end mb-3 ">
         <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       </div>
